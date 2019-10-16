@@ -3,12 +3,14 @@
   <div class="main-container">
     <h1>Countries App Part 2</h1>
     <countries-list :countries='countries'></countries-list>
+    <country-detail v-if='selectedCountry' :country='selectedCountry'></country-detail>
   </div>
 </template>
 
 <script>
 import CountriesList from './components/CountriesList.vue';
 import CountryDetail from './components/CountryDetail.vue';
+import ListComponent from './components/ListComponent.vue'
 import {eventBus} from './main.js';
 
 export default {
@@ -28,9 +30,11 @@ export default {
       this.selectedCountry = country;
     });
   },
+
   components: {
     "countries-list": CountriesList,
-    "country-detail": CountryDetail
+    "country-detail": CountryDetail,
+    "list-item": ListComponent
   }
 }
 

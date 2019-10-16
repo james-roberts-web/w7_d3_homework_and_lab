@@ -1,5 +1,7 @@
 <template lang="html">
-
+  <div>
+    <h3>{{country.name}}</h3>
+  </div>
 </template>
 
 <script>
