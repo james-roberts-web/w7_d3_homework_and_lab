@@ -1,7 +1,7 @@
 <template lang="html">
+    
+  <div class="container">
 
-  <div class="main-container">
-    <h1>Countries App Part 2</h1>
     <countries-list :countries='countries'></countries-list>
     <country-detail v-if='selectedCountry' :country='selectedCountry'></country-detail>
   </div>
@@ -41,4 +41,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
+  .container {
+    display: flex;
+    justify-content: space-around;
+    font-family: Helvetica, Arial, sans-serif;
+  }
 </style>
